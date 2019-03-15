@@ -1,0 +1,99 @@
+#special{
+	width: 100%;
+	margin-top: 2px;
+}
+#special .aside{
+	width:14%;
+	margin:20px 1%;
+	padding:30px 0;
+	text-align: center;
+	background: #6DB7D9;
+}
+#special .aside h2{
+	color:#FBE80A;
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+}
+#special .aside .selectUl .active{
+	background: #ccc;
+	border-radius: 30px;
+}
+#special .aside .selectUl li{
+	height: 60px;
+	line-height: 60px;
+}
+#special .aside .selectUl li:hover{
+	background: #ccc;
+	border-radius: 30px;
+}
+#special .aside .selectUl li a{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	color:#fff;
+}
+#special .main{
+	width: 80%;
+	margin:20px 2% 20px 0;
+	padding:0;
+}
+#special .main .selectCard{
+	width:100%;
+	overflow: hidden;
+	display: none;
+}
+#special .main .active{
+	display: block;
+}
+#special .main .selectCard h1{
+	padding: 18px;
+}
+#special .main .selectCard .intro{
+	margin:0 20px 20px 20px;
+	padding-bottom: 10px;
+	text-indent: 2em;
+	line-height: 30px;
+	font-size: 16px;
+	border-bottom: 2px solid #dada8d;
+}
+#special .main .selectCard .list{
+	width:100%;
+}
+#special .main .selectCard .list li{
+	width:33.3%;
+	float:left;
+	margin: 20px 0;
+	overflow: hidden;
+}
+#special .main .selectCard .list li a{
+	display: block;
+	width:300px;
+	margin:0 auto;
+}
+#special .main .selectCard .list li a img{
+	width:300px;
+	height:300px;
+}
+#special .main .selectCard .list li a p{
+	width:300px;
+	line-height: 24px;
+	font-size: 14px;
+}
+#special .main .selectCard .list li a p span:nth-child(1){
+	color:#666;
+}
+#special .main .selectCard .list li a p:nth-child(3) span:nth-child(2){
+	display: block;
+	height:190px;
+	overflow: hidden;
+	text-indent: 2em;
+	position: relative;
+}
+#special .main .selectCard .list li a p:nth-child(3) span:nth-child(2)::after{
+	content: "..."; 
+	position: absolute; 
+	bottom: 0; 
+	right: 0; 
+	padding-left: 40px;
+}

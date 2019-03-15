@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <title>Baidu Map </title>
+     <!--
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
+	<link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jgzOzDlEPQ9nQ35r8CZrbgMyCeP2fTTM"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/RectangleZoom/1.2/src/RectangleZoom_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
+     -->
+    <link rel="stylesheet" type="text/css" href="css/baiduAPI/DrawingManager_min.css">
+    <link rel="stylesheet" type="text/css" href="css/baiduAPI/SearchInfoWindow_min.css">
+    <link rel="stylesheet" type="text/css" href="css/baiduAPI/TrafficControl_min.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <style>
+        html{height:100%}
+        body{
+            height:100%;
+            margin:0px;
+            padding:0px
+        }
+        #container{height:100%}
+        #map_search{
+            margin-top:10px;
+        }
+        #map_search>div{
+            display: inline-block;
+            line-height: 60px;
+            padding: 0 20px;
+            background: #ccc;
+            color:#000;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        #map_search #resultPanel{
+            position: fixed;
+            right:8px;
+            top:4px;
+            width:400px;
+            height:600px;
+            line-height: 17px;
+            overflow: scroll;
+            z-index: 100;
+            display: none;
+            padding: 0;
+            margin:0;
+            background: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- header start -->
+    <div class="header linear-blue shadow radiu">
+        <div class="wrap">
+            <div class="clearfix head">
+                <div class="fl logo">
+                    <img src="image/icon1.png" alt="" class="fl">
+                    <div class="fl">
+                        <h1>临潼区旅游资源网</h1>
+                        <p>西安·临潼欢迎您！</p>
+                    </div>
+                </div>
+                <div class="fr jq-qh">
+                    <ul class="fr jq-city"><li>阴 西南风微风,16-28℃ 临潼区</li></ul>
+                    <div class="fr jq-ssd">
+                        <ul>
+                            <li><span>骊山风景区：舒适</span></li>
+                            <li><span>秦始皇兵马俑：舒适</span></li>
+                            <li><span>世界八大奇迹馆：舒适</span></li>
+                            <li><span>华清池：舒适</span></li>
+                        </ul>
+                    </div>
+                    <label class="fr">景区舒适度：</label>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-flus">
+            <div class="clearfix wrap">
+                <ul class="nav" id="nav">
+                    <li>
+                        <a href="./index.html">网站首页</a>
+                    </li>
+                    <li>
+                        <a href="./general.html#LTintro">临潼概况</a>
+                        <div class="subnav">
+                            <ul>
+                                <li><span>临潼概况</span></li>
+                                <li><a href="./general.html#geograph">地理环境</a></li>
+                                <li><a href="./general.html#climate">临潼气候</a></li>
+                                <li><a href="./general.html#regional">区域规划</a></li>
+                                <li><a href="./general.html#culture">历史文化</a></li>
+                                <li><a href="./general.html#speciality">地方特产</a></li>
+                                <li><a href="./general.html#traffic">交通运输</a></li>
+                                <li><a href="./general.html#scenery">风景名胜</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">畅游临潼</a>
+                        <div class="subnav">
+                            <ul>
+                                <li><span>景区推荐</span></li>
+                                <li><a href="scenic.html?id=1">秦始皇兵马俑博物馆</a></li>
+                                <li><a href="scenic.html?id=11">华清池</a></li>
+                                <li><a href="scenic.html?id=17">八大奇迹馆</a></li>
+                                <li><a href="scenic.html?id=15">骊山国家森林公园</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">旅游攻略</a>
+                        <div class="subnav">
+                            <div>
+                                <a href="./host.html" class="yjzs">宜居住宿</a>
+                                <a href="./recreation.html" class="xxyl">休闲娱乐</a>
+                                <a href="./shopping.html" class="tsgw">临潼购物</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./oneday.html">一日游</a>
+                    </li>
+                    <li>
+                        <a href="">旅游帮助</a>
+                        <div class="subnav">
+                            <ul><li><a href="./1showBMap.html">查询地图</a></li></ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <div id="map_search">
+        <div id="jd">景点</div>
+        <div id="zs">酒店</div>
+        <div id="cy">餐饮</div>
+        <div id="yy">医院</div>
+        <div id="gw">购物</div>
+        <div class="optionpanel">
+            <label>选择地图主题:</label>
+            <select id="stylelist">
+                <option value="normal">默认样式</option>}
+                <option value="light">清新蓝风格</option>
+                <option value="dark">黑夜风格</option>
+                <option value="redalert">红色警戒风格</option>
+                <option value="googlelite">精简风格</option>
+                <option value="grassgreen">自然绿风格</option>
+                <option value="midnight">午夜蓝风格</option>
+                <option value="pink">浪漫粉风格</option>
+                <option value="darkgreen">青春绿风格</option>
+                <option value="bluish">清新蓝绿风格</option>
+                <option value="grayscale">高端灰风格</option>
+                <option value="hardedge">强边界风格</option>
+            </select>
+        </div>
+        <div id="driving_way">
+                <label>起点：<input id="start" type="" ></label>
+                <label>终点：<input id="end" type="" ></label>
+                <select>
+                    <option value="0">最少时间</option>
+                    <option value="1">最短距离</option>
+                    <option value="2">避开高速</option>
+                </select>
+                <input type="button" id="driving_btn" value="查询"/>
+            </div>
+        <div>
+            <label for="suggestId">查询：<input type="text" id="suggestId"></label>
+        </div>
+        <div id="resultPanel"></div>
+    </div>
+    <div id="container"></div>
+
+    <!-- footer start -->
+    <div class="linear-blue shadow radiu">
+        <div class="wrap">
+            <div class="footer">
+                <address>西安科技大学实验站点&nbsp;&nbsp;作者：<em>bwhite</em></address>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/header.js" ></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jgzOzDlEPQ9nQ35r8CZrbgMyCeP2fTTM"></script>
+	<script type="text/javascript" src="js/baiduAPI/RectangleZoom_min.js" ></script>
+	<script type="text/javascript" src="js/baiduAPI/DrawingManager_min.js" ></script>
+	<script type="text/javascript" src="js/baiduAPI/SearchInfoWindow_min.js" ></script>
+	<script type="text/javascript" src="js/baiduAPI/TrafficControl_min.js" ></script>
+	<script type="text/javascript" src="js/baidu.js"></script>
+</body>
+</html>

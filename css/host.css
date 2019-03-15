@@ -1,0 +1,110 @@
+#host{
+	padding: 8px 0;
+}
+#host h4{
+	font-weight: normal;
+}
+#host .host-select{
+	padding: 8px 4px;
+	margin: 8px 0;
+	border:1px solid #ccc;
+	color:#666;
+}
+#host .host-select > div > div{
+	float: left;
+	padding:2px 0;
+}
+#host .host-select ul li{
+	float:left;
+	display: inline-block;
+	margin-left:10px;
+	width: 100px;
+}
+#host .host-select ul li:nth-child(1){
+	width:40px;
+}
+#host .host-select ul li a{
+	color:#666;
+}
+#host .host-select ul li a:hover{
+	color:#71c6d9;
+}
+#host #hostShow{
+	overflow: hidden;
+}
+#host #hostShow .hostRow{
+	height: 175px;
+	margin-top: 15px;
+	border:1px solid #e6e6e6;
+	border-left: none;
+	border-right:none;
+	color:#666;
+	font-size: 16px;
+}
+#host #hostShow .hostRow .host-img img{
+	width:262px;
+	height: 175px;
+	margin-right: 20px;
+}
+#host #hostShow .hostRow .host-info{
+	width:426px;
+	height: 175px;
+	margin-right:40px;
+}
+#host #hostShow .hostRow .host-info div{
+	line-height: 24px;
+	margin:8px 0;
+}
+#host #hostShow .hostRow .host-info .nameAndType a{
+	color:#333;
+	font-size: 18px;
+	font-weight: bold;
+}
+#host #hostShow .hostRow .host-info .nameAndType span{
+	margin-left:10px;
+}
+#host #hostShow .hostRow .host-info .route a{
+	color:green;
+}
+#host #hostShow .hostRow .priceAndScore{
+	height:175px;
+	padding-left:20px;
+	border-left:1px dashed #ccc;
+}
+#host #hostShow .hostRow .priceAndScore div{
+	margin-top:8px;
+	text-align: center;
+}
+#host #hostShow .hostRow .priceAndScore .startPrice{
+	color:orange;
+}
+#host #hostShow .hostRow .priceAndScore .startPrice span{
+	font-size: 24px;
+}
+#host #hostShow .hostRow .priceAndScore .detail a{
+	background: orange;
+	color:#fff;
+	display: inline-block;
+	padding:4px 10px;
+}
+
+#host #page{
+	margin-top: 8px;
+	text-align: center;
+}
+#host #page div{
+	display: inline-block;
+	height:24px;
+	margin: 0 auto;
+}
+#host #page div a{
+	display: inline-block;
+	padding:3px 10px;
+	margin:0 1px;
+	background: #9494ed;
+	color:#fff;
+}
+#host #page div .pageActive{
+	background: orange;
+	border-radius:4px;
+}

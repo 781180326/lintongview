@@ -1,0 +1,93 @@
+
+/* 临潼概况 */
+.general{
+	width:100%;
+	margin-top: 10px;
+	position: relative;
+	color:#000;
+}
+.general .aside{
+	width:15%;
+	margin:20px 2% 20px 1%;
+	position: fixed;
+}
+
+.general .aside .generalList li{
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 1.5em;
+	border: 2px solid #b4dfe6;
+	margin-top: 15px;
+	border-radius: 6px;
+}
+.general .aside .generalList li a{ color: #000; }
+.general .aside .generalList li a:hover{ color:red; }
+.general .main{
+	width:76%;
+	margin:20px 1% 20px 0;
+	background: #efe0a9;
+	box-shadow: -2px 2px 2px #ccc ,2px -2px 0 #ccc;
+	float:right;
+}
+.general .main .general-li{
+	width:96%;
+	margin:20px 2%;
+}
+.general .main .general-li h2{
+	margin:10px;
+	padding-left: 20px;
+}
+.general .main .general-li h2 p{ 
+	width:80%;
+	float:right; 
+	margin-top: 16px; 
+	height:1px; 
+	line-height: 1px;
+	background: #c5a7b9; 
+}
+.general .main  #LTintro h2{ background: url(../image/icon.png) no-repeat 0 -256px; }
+.general .main  #LTintro span{ color:orange; }
+.general .main  #geograph h2{ background: url(../image/icon.png) no-repeat 0 -300px; }
+.general .main  #geograph span{ color:blue; }
+.general .main  #climate h2{ background: url(../image/icon.png) no-repeat 0 -346px; }
+.general .main  #climate span{ color:green; }
+.general .main  #regional h2{ background: url(../image/icon.png) no-repeat 0 -390px; }
+.general .main  #regional span{ color:orange; }
+.general .main  #culture h2{ background: url(../image/icon.png) no-repeat 0 -436px; }
+.general .main  #culture span{ color:blue; }
+.general .main  #speciality h2{ background: url(../image/icon.png) no-repeat 0 -482px; }
+.general .main  #speciality span{ color:green; }
+.general .main  #traffic h2{ background: url(../image/icon.png) no-repeat 0 -526px; }
+.general .main  #traffic span{ color:orange; }
+.general .main  #scenery h2{ background: url(../image/icon.png) no-repeat 0 -256px; }
+.general .main  #scenery span{ color:blue; }
+
+.general .main .general-li .article{
+	text-indent: 2em;
+	padding:20px;
+}
+.general .main .general-li .article p {
+    line-height: 30px;
+	font-size: 16px;
+}
+.general .main .general-li .article h4{ color:#db3931; }
+.general .main .general-li .article img{ 
+	display: block;
+	width:400px;
+	margin:5px auto; 
+}
+
+
+
+#goTop{
+	width:100px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	background: #ccc;
+	color:#fff;
+	position: fixed;
+	bottom:20px;
+	right:40px;
+}
